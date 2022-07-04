@@ -15,10 +15,10 @@
 ##实验过程
 
 ###打开虚拟机就遇到网络配置问题，参考畅课互动区同学的解决方案
-![](img\error.jpg)
+![](img/error.jpg)
 
 ###解决网络问题后进入ub
-![](img\begin.jpg)
+![](img/begin.jpg)
 
 ## 一、调查并记录实验环境的如下信息：
 
@@ -53,7 +53,7 @@ less
 或
 
     uname -r
-![当前 Linux 内核版本信息](img\1.2core.jpg)
+![当前 Linux 内核版本信息](img/1.2core.jpg)
 
 ## 二、Virtualbox安装完Ubuntu之后新添加的网卡如何实现系统开机自动启用和自动获取IP？
 
@@ -61,13 +61,13 @@ less
 
     ip a
 
-![查询网卡](img\2.1ip.jpg)
+![查询网卡](img/2.1ip.jpg)
 ### vim
     cd /etc/netplan
 
-![](img\2.2vim.jpg)
+![](img/2.2vim.jpg)
 ###yaml
-![yaml](img\2.3yaml.jpg)
+![yaml](img/2.3yaml.jpg)
 
 ub20会自动分配好
 
@@ -86,7 +86,7 @@ ub20会自动分配好
 
     sudo apt-get install openssh-server
 
-![安装ssh](img\openssh.jpg)
+![安装ssh](img/openssh.jpg)
 
 **在虚拟机中创建一个文件夹my-dir,再`cd`到文件夹中。创建三个文件1,2,3,使用`pwd`命令查看他们的路径**
 
@@ -102,19 +102,19 @@ ub20会自动分配好
     /home/cuc/ my-dir
 
 
-![创建一个文件夹](img\touch.jpg)
+![创建一个文件夹](img/touch.jpg)
 
 **在本地git-bash中输入如下命令,就可以将虚拟机的文件传输到主机**
 
     scp -r cuc@192.168.56.101:/home/cuc my-dir
 
-![](img\scp.jpg)
+![](img/scp.jpg)
 
 **将文件从本地传输到虚拟机**
 
     scp C:\Users\zhang\Desktop\text.txt cuc@192.168.56.101:/home/cuc/
 
-![将文件从本地传输到虚拟机](img\scp2.jpg)
+![将文件从本地传输到虚拟机](img/scp2.jpg)
 
 
 ##四.如何配置SSH免密登录？
@@ -125,7 +125,7 @@ ub20会自动分配好
 
     ssh-copy-id cuc@192.168.56.101
 
-![](img\sshpass.jpg)
+![](img/sshpass.jpg)
 
 
 ##问题与解决
