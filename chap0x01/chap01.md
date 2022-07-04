@@ -30,19 +30,19 @@
 
     cat /etc/issue
 
-![当前 Linux 发行版基本信息](img\1.1release1.jpg)
+![当前 Linux 发行版基本信息](img/1.1release1.jpg)
 
 详细cat
 
     cat /etc/os-release
-![当前 Linux 发行版基本信息](img\1.1release2.jpg)
+![当前 Linux 发行版基本信息](img/1.1release2.jpg)
 
 less
 
     less /etc/os-release 
 
 
-![当前 Linux 发行版基本信息](img\1.1release3.jpg)
+![当前 Linux 发行版基本信息](img/1.1release3.jpg)
 
 *Q退出命令执行*
 
