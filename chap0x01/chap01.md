@@ -1,5 +1,5 @@
 # 作业1
-##实验问题
+## 实验问题
 
 1、调查并记录实验环境的如下信息：
 
@@ -12,12 +12,12 @@
 
 4、如何配置 SSH 免密登录？
 
-##实验过程
+## 实验过程
 
-###打开虚拟机就遇到网络配置问题，参考畅课互动区同学的解决方案
+### 打开虚拟机就遇到网络配置问题，参考畅课互动区同学的解决方案
 ![](img/error.jpg)
 
-###解决网络问题后进入ub
+### 解决网络问题后进入ub
 ![](img/begin.jpg)
 
 ## 一、调查并记录实验环境的如下信息：
@@ -26,18 +26,18 @@
 
 
 
-简易cat
+**简易cat**
 
     cat /etc/issue
 
 ![当前 Linux 发行版基本信息](img/1.1release1.jpg)
 
-详细cat
+**详细cat**
 
     cat /etc/os-release
 ![当前 Linux 发行版基本信息](img/1.1release2.jpg)
 
-less
+**less**
 
     less /etc/os-release 
 
@@ -66,7 +66,7 @@ less
     cd /etc/netplan
 
 ![](img/2.2vim.jpg)
-###yaml
+### yaml
 ![yaml](img/2.3yaml.jpg)
 
 ub20会自动分配好
@@ -117,7 +117,7 @@ ub20会自动分配好
 ![将文件从本地传输到虚拟机](img/scp2.jpg)
 
 
-##四.如何配置SSH免密登录？
+## 四.如何配置SSH免密登录？
 **在本地git-bash生成公私钥对**
 
     ssh-keygen -t rsa
@@ -128,7 +128,7 @@ ub20会自动分配好
 ![](img/sshpass.jpg)
 
 
-##问题与解决
+## 问题与解决
 
 
 - **刚开始就遇到完全进不去虚拟机的情况**。参考了*畅课讨论区武国雯同学的解答方法*（要是没有同学那个解决方案，我可能就是寸步难行。）她的解决方案非常详细！
@@ -137,7 +137,7 @@ ub20会自动分配好
 
 **以上2个问题都耗费了我大量的时间。让我怀疑人生，但最终是艰难地解决了**
 
-##参考
+## 参考
 
 [虚拟机安装ubuntu&文件传输&远程连接和控制](https://blog.csdn.net/weixin_34062469/article/details/88057755?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522165676404116782389423436%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=165676404116782389423436&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~pc_rank_34-2-88057755-null-null.142^v30^pc_rank_34,185^v2^control&utm_term=linux%E4%BD%BF%E7%94%A8scp%E5%86%8D%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%92%8C%E5%AE%BF%E4%B8%BB%E4%B9%8B%E9%97%B4%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6&spm=1018.2226.3001.4187)
 
