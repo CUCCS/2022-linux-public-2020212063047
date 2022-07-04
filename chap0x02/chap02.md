@@ -60,7 +60,7 @@
 
 ###我的asciinema主页
 
-![](img\asciinema.jpg)
+![](img/asciinema.jpg)
 
 ## 【软件包管理】在目标发行版上安装 tmux 和 tshark ；查看这 2 个软件被安装到哪些路径；卸载 tshark ；验证 tshark 卸载结果 ：
 
