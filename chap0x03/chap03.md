@@ -94,9 +94,9 @@
 [![](https://asciinema.org/a/iAbXKMoQrKzE07b2RgocMShFn.svg)](https://asciinema.org/a/iAbXKMoQrKzE07b2RgocMShFn)
 
 
-##unit
+## unit
 
-Unit 一共分成12种。
+**Unit 一共分成12种。**
 
 
 
@@ -511,15 +511,16 @@ Restart = always
 
 
 
-##问题与解决
+## 问题与解决
 
 - **实验中遇到apache2启动失败的问题，即使卸载了重新装也是如此**
+
 ![](img/apache2-error.jpg)
+
 经过测试卸载并**清除软件包的配置**即可解决
 [apache2启动失败解决](https://www.codeprj.com/blog/968b8f1.html)
 
     sudo apt-get purge apache2 
-
     sudo apt-get install apache2
 
 
