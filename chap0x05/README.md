@@ -156,7 +156,25 @@ PHP-FPM进程的反向代理配置在`nginx`服务器上，`VeryNginx`服务器�
     sudo vim wp-config-sample
     mv wp-config-sample wp-config
 
+进入配置文件
 
+    sudo vim /var/www/html/wordpress/wp-config.php
+
+修改相关配置
+
+    // ** MySQL settings - You can get this info from your web host ** //
+    /** The name of the database for WordPress */
+    define('DB_NAME', 'wordpress');
+    /** MySQL database username */
+    define('DB_USER', 'zsq');
+    /** MySQL database password */
+    define('DB_PASSWORD', '1012');
+    /** MySQL hostname */
+    define('DB_HOST', 'localhost');
+    /** Database Charset to use in creating database tables. */
+    define('DB_CHARSET', 'utf8');
+    /** The Database Collate type. Don't change this if in doubt. */
+    define('DB_COLLATE', '');
 
 ![download](img/sudo.jpg)
 
