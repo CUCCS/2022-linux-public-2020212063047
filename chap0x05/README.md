@@ -70,7 +70,6 @@ PHP-FPM进程的反向代理配置在`nginx`服务器上，`VeryNginx`服务器�
     sudo apt-get update
 
     sudo apt install gcc
-
     sudo apt install make
 
 ### 安装`VeryNginx`
@@ -135,11 +134,29 @@ PHP-FPM进程的反向代理配置在`nginx`服务器上，`VeryNginx`服务器�
 再次修改Nginx配置文件，将PHP-FPM进程的反向代理配置在Nginx服务器上
 
 
-##### 安装`WordPress`
+##### 安装与配置`WordPress`
 
-下载`WordPress 4.7`压缩包并解压
+
+下载安装包
 
     sudo wget https://wordpress.org/wordpress-4.7.zip
+
+解压
+
+    sudo apt install p7zip-full
+    7z x wordpress-4.7.zip
+
+将解压后的wordpress移⾄指定路径
+
+    sudo mkdir /var/www/html/wp.sec.cuc.edu.cn
+    sudo cp wordpress /var/www/html/wp.sec.cuc.edu.cn
+
+修改wp-config-sample中的内容，并更名为wp-config
+
+    sudo vim wp-config-sample
+    mv wp-config-sample wp-config
+
+
 
 ![download](img/sudo.jpg)
 
@@ -153,7 +170,6 @@ PHP-FPM进程的反向代理配置在`nginx`服务器上，`VeryNginx`服务器�
 ##### 下载安装`mysql`数据库
 
     sudo apt-get install mysql-server
-
     sudo mysql
 
 建立一个`wordpress`数据库
