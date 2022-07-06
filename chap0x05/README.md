@@ -160,13 +160,13 @@ PHP-FPM进程的反向代理配置在`nginx`服务器上，`VeryNginx`服务器�
 
      CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-新建用户`taozi`
+新建用户`zsq`
 
-    create user 'taozi'@'localhost' identified by 'taozi0310';
+    create user 'zsq'@'localhost' identified by 'zsq1012';
 
 授予相关权限
 
-    grant all on wordpress.* to 'taozi'@'localhost';
+    grant all on wordpress.* to 'zsq'@'localhost';
 
 刷新权限
 
@@ -206,8 +206,8 @@ PHP-FPM进程的反向代理配置在`nginx`服务器上，`VeryNginx`服务器�
 
     sudo mysql
     CREATE DATABASE dvwa DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-    CREATE USER 'taozi2'@'localhost' IDENTIFIED BY 'taozi020310';
-    GRANT ALL ON dvwa.* TO 'taozi2'@'localhost';
+    CREATE USER 'zsq2'@'localhost' IDENTIFIED BY 'taozi020310';
+    GRANT ALL ON dvwa.* TO 'zsq2'@'localhost';
     flush privileges;
     exit
 
