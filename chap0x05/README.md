@@ -119,7 +119,6 @@ PHP-FPM进程的反向代理配置在`nginx`服务器上，`VeryNginx`服务器�
 ### 安装`Nginx`
 
     sudo apt-get update
-
     sudo apt-get install Nginx
 
 使用`vim`进入`Nginx`相关目录并修改相应内容
@@ -253,18 +252,26 @@ PHP-FPM进程的反向代理配置在`nginx`服务器上，`VeryNginx`服务器�
 修改`php-fpm`文件
 
     sudo vim /etc/php/7.4/fpm/php.ini
+    display_errors: Off
+    safe_mode: Off
+    allow_url_include: On
+    allow_url_fopen: On
+
+重启php
+    systemctl restart php7.4-fpm.service
 
 授权给`www-data`用户和组
 
     sudo chown -R www-data.www-data /var/www/html/dvwa.sec.cuc.edu.cn
 
-再配置相关文件
+再创建并配置相关文件
+
+    sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/dvwa.sec.cuc.edu.cn
 
     sudo vim /etc/nginx/sites-available/dvwa.sec.cuc.edu.cn
 
 写入的内容与`wordpress` 的配置类似
 
-``` shell
     server {
 
     listen 8081 default_server;
@@ -288,11 +295,15 @@ PHP-FPM进程的反向代理配置在`nginx`服务器上，`VeryNginx`服务器�
         deny all;
     }
   }
-```
+
 
 创建软连接
 
     sudo ln -s /etc/nginx/sites-available/dvwa.sec.cuc.edu.cn /etc/nginx/sites-enabled/
+
+检查并重启服务
+    sudo nginx -t
+    systemctl restart nginx.service
 
 ### 实验进行
 
@@ -333,19 +344,21 @@ PHP-FPM进程的反向代理配置在`nginx`服务器上，`VeryNginx`服务器�
 
 - 很多
 
-- 安装verynginx
-- hosts修改
-  然后再在类似位置加上以下的内容
+- 安装verynginx。参考畅课讨论区同学的帖子，在opt目录下进行安装操作,并且修改端口为8081避免冲突。
 
+- 主机也要修改hosts
+  找到并添加
      192.168.56.101 vn.sec.cuc.edu.cn
      192.168.56.101 dvwa.sec.cuc.edu.cn
      192.168.56.101 wp.sec.cuc.edu.cn
+
 - 配置wordpress配置完成后，重启nginx时总是不成功
 
 - DVWA查看默认密码
-
+- 修改DVWA的配置文件，打开发现是空文件。搞了好久发现是忘记创建配置文件了，应该先用`sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/dvwa.sec.cuc.edu.cn`创建再配置
 
 - wordpress登录问题
+  网址无法成功访问，并出现报错，无法成功跳转网页。查阅资料发现要先用`sudo nginx -t`进行检查，再用`systemctl restart nginx.service`命令重启，之后点击链接可以正常跳转。
 
 - ！！多备份
 
